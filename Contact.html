@@ -1,0 +1,180 @@
+<!DOCTYPE.html>
+<head>
+    <title>Contact Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #0A192F;
+            color: #4c577d;
+        }
+
+
+        nav {
+            width: 100%;
+            background-color: #6C63FF;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            transform: scale(1.2);
+            color: #ffcc00;
+        }
+
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: #0A192F;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1 {
+            color: rgb(46, 108, 108);
+            font-size: 40px;
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+        }
+
+        label {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        input,textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            width: 100%;
+        }
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #5c67f2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #4a54e0;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #4f5978;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #64FFDA;
+        }
+
+        #copy {
+            font-size: x-small;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Education.html">Education</a></li>
+            <li><a href="Project.html">Projects</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Contact Me</h1>
+        <form action="https://example.com/contact" method="POST">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="social-links">
+            <p>Connect with me on:</p>
+            <a href="https://www.linkedin.com/in/akshat-neeraj-319718292" target="_blank" title="LinkedIn">
+                <img src="/Linkedin.webp" alt="LinkedIn" width="40"
+                    height="40">
+            </a>
+            <a href="https://github.com/Akshat-Neeraj" target="_blank" title="GitHub">
+                <img src="Git.webp" alt="GitHub" width="40"
+                    height="40">
+            </a>
+        </div>
+
+        <div id="copy">
+            <p>&copy; 2024 Akshat Neeraj. All rights reserved.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

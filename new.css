@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #0A192F;
+    color: #4c577d;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start; 
+    padding: 20px 15%;
+    background-color: transparent;
+    font-size: 18px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-right: 160px; 
+}
+
+.nav-links li:last-child {
+    margin-right: 0; 
+}
+
+.nav-links a {
+    color: #4f5978;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #64FFDA;
+}
+
+.intro-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%; 
+    text-align: center;
+    position: relative;
+}
+
+.para {
+    color: rgb(43, 120, 94);
+    font-size: 20px;
+    margin-top: -10px; 
+}
+
+#name {
+    font-size: 50px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    color: rgb(46, 108, 108);
+    position: relative;
+    left: -40px; 
+    margin-top: -10px;
+}
+
+#ab {
+    color: rgb(43, 120, 94);
+    font-size: 20px;
+}
+
+.pic-container {
+    margin-left: 30px;
+}
+
+.profile-pic {
+    height: 370px; 
+    width: 340px;  
+    border-radius: 25%;
+    opacity: 0.85; 
+    transition: opacity 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+    opacity: 1; 
+}
+
+#copy {
+    position: absolute;
+    bottom: 10px;
+    font-size: x-small;
+    text-align: center;
+    width: 100%;
+}
