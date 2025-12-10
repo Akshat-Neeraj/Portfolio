@@ -31,7 +31,6 @@ body {
   line-height: 1.6;
 }
 
-/* Layout */
 
 .container {
   width: min(1120px, 100% - 32px);
@@ -45,8 +44,6 @@ body {
 .section--alt {
   background: rgba(7, 11, 27, 0.9);
 }
-
-/* Page shell (center main card) */
 
 .page-shell {
   min-height: 100vh;
@@ -67,8 +64,6 @@ body {
     border-radius: 26px 26px 0 0;
   }
 }
-
-/* Section titles */
 
 .section__title {
   font-size: clamp(1.9rem, 2.4vw, 2.3rem);
@@ -96,7 +91,6 @@ body {
   max-width: 560px;
 }
 
-/* NAVBAR */
 
 .nav {
   position: sticky;
@@ -156,7 +150,6 @@ body {
   width: 100%;
 }
 
-/* HERO */
 
 .hero {
   position: relative;
@@ -218,7 +211,6 @@ body {
   font-size: 0.98rem;
 }
 
-/* Hero stats */
 
 .hero__stats {
   display: flex;
@@ -259,7 +251,6 @@ body {
   color: var(--muted);
 }
 
-/* Hero right card */
 
 .hero__right {
   display: flex;
@@ -321,7 +312,6 @@ body {
   border: 1px solid rgba(148, 163, 184, 0.4);
 }
 
-/* Hero scroll hint */
 
 .hero__scroll {
   position: absolute;
@@ -332,8 +322,6 @@ body {
   color: var(--muted);
   opacity: 0.9;
 }
-
-/* BUTTONS */
 
 .btn {
   display: inline-flex;
@@ -374,14 +362,26 @@ body {
   background: rgba(15, 23, 42, 0.95);
 }
 
-/* ABOUT */
 
-.about__grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 26px;
+.about__card {
+  max-width: 960px;
+  background: var(--card);
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  padding: 18px 20px 20px;
+  box-shadow: var(--shadow-soft);
   color: var(--muted);
   margin-bottom: 30px;
+}
+
+.about__card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.about__card-grid p {
+  font-size: 0.95rem;
 }
 
 .about-highlights {
@@ -402,13 +402,12 @@ body {
   margin-bottom: 6px;
 }
 
-/* SKILLS */
 
 .skills__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
-  align-items: stretch; /* make all cards equal height */
+  align-items: stretch;
 }
 
 .skills__group {
@@ -417,7 +416,7 @@ body {
   border: 1px solid var(--border);
   padding: 16px 15px;
   box-shadow: var(--shadow-soft);
-  display: flex;           /* stack items */
+  display: flex;
   flex-direction: column;
 }
 
@@ -431,7 +430,6 @@ body {
   margin-bottom: 10px;
 }
 
-/* keeps pills at bottom so all cards align */
 .skills__group .pill-row {
   margin-top: auto;
 }
@@ -450,8 +448,6 @@ body {
   background: rgba(15, 23, 42, 0.95);
   color: var(--muted);
 }
-
-/* PROJECTS */
 
 .projects__grid {
   display: grid;
@@ -563,20 +559,28 @@ body {
   color: var(--text);
 }
 
-/* TIMELINE */
 
-.timeline {
-  border-left: 1px solid var(--border);
-  margin-top: 12px;
-}
-
-.timeline--card {
-  border-left: none;
+.timeline-card {
   background: var(--card);
   border-radius: 18px;
   border: 1px solid var(--border);
   padding: 22px 18px;
   box-shadow: var(--shadow-soft);
+}
+
+.timeline {
+  position: relative;
+  margin-left: 16px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--border);
 }
 
 .timeline__item {
@@ -591,10 +595,10 @@ body {
 
 .timeline__dot {
   position: absolute;
-  left: -6px;
+  left: -7px;
   top: 4px;
-  width: 11px;
-  height: 11px;
+  width: 13px;
+  height: 13px;
   border-radius: 999px;
   background: var(--accent);
   box-shadow: 0 0 0 4px var(--accent-soft);
@@ -616,7 +620,6 @@ body {
   margin-top: 5px;
 }
 
-/* CONTACT */
 
 .contact__grid {
   display: grid;
@@ -707,8 +710,6 @@ body {
   color: var(--muted);
 }
 
-/* FOOTER */
-
 .footer {
   border-top: 1px solid var(--border);
   background: #020617;
@@ -734,30 +735,37 @@ body {
   color: var(--accent);
 }
 
-/* RESPONSIVE */
 
 @media (max-width: 900px) {
   .hero__content {
     grid-template-columns: minmax(0, 1fr);
     gap: 32px;
   }
+
   .hero__left {
     text-align: center;
   }
+
   .hero__subtitle {
     margin-inline: auto;
   }
+
   .hero__stats {
     justify-content: center;
   }
+
   .hero__actions {
     justify-content: center;
   }
+
   .hero__right {
     justify-content: center;
   }
 
-  .about__grid,
+  .about__card-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .about-highlights,
   .skills__grid,
   .projects__grid,
@@ -777,10 +785,12 @@ body {
     flex-direction: column;
     gap: 6px;
   }
+
   .nav__links {
     flex-wrap: wrap;
     justify-content: center;
   }
+
   .section {
     padding: 64px 0;
   }
